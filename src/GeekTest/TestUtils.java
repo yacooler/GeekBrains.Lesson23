@@ -54,7 +54,7 @@ class TestUtils {
         for (Method met : annotation.getClass().getMethods()) {
             if (met.getName().equalsIgnoreCase("isSingleRun")) {
                 if (met.getReturnType().equals(TestPriority.class)) {
-                    return ((TestPriority) met.invoke(annotation)).isSingleRun();
+                    return ((TestPriority) met.invoke(annotation)).isRunOnce();
                 }
             }
         }

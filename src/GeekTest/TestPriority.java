@@ -17,19 +17,19 @@ public enum TestPriority {
     RUN_AFTER(Integer.MAX_VALUE, true);
 
     private int order;
-    private boolean singleRun;
+    private boolean runOnce;
 
-    TestPriority(int order, boolean singleValue){
+    TestPriority(int order, boolean runOnce){
         this.order = order;
-        this.singleRun = singleValue;
+        this.runOnce = runOnce;
     }
 
     public int getOrder() {
         return order;
     }
 
-    public boolean isSingleRun() {
-        return singleRun;
+    public boolean isRunOnce() {
+        return runOnce;
     }
 }
 
