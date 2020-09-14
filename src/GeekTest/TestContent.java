@@ -63,7 +63,7 @@ class TestContent {
 
                         //Проверим, не было ли такого метода ранее
                         if (methodSingleValue && methods.containsKey(methodPriority)){
-                            throw new RuntimeException("Метод %s может быть запущен только один раз!");
+                            throw new RuntimeException(String.format("Метод с аннотацией %s может быть запущен только один раз!", annotation.annotationType().getName()));
                         }
                         //Добавляем метод в мапу
                         methods.put(methodPriority, method);
